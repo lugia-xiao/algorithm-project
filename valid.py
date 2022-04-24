@@ -1,7 +1,7 @@
 import pandas as pd
 import os
 import numpy as np
-from kmm import *
+#from kmm import * # used for calculate reads.fa
 
 def valid(df,x,speciex):
     speciey = df.iloc[x, 1]
@@ -21,7 +21,7 @@ if __name__ == '__main__':
     df=pd.DataFrame({"name":name,"specie":specie})
     df.set_index("name")
     df.to_csv("valid.csv",index=False)
-
+    '''# used for calculate reads.fa
     # statistic
     dic = {}
     group = np.zeros(len(os.listdir("./genomes")))
@@ -31,7 +31,8 @@ if __name__ == '__main__':
     for i in range(len(df)):
         dic[df.iloc[i,1]] += 1
     all = [[k, v] for k, v in dic.items()]
-    tocsv(all, ["specie", "number"], "assigned-fact.csv")
+    tocsv(all, ["specie", "number"], "assigned-map.csv")
+    '''
 
 
 
