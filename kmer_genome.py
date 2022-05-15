@@ -131,7 +131,7 @@ def tocsv(data,header,file_path):
     return dataframe
 
 if __name__ == '__main__':
-    '''# cos
+    # cos
     all=[]
     for k in range(3,10):
         #只记录cpu时间
@@ -183,7 +183,7 @@ if __name__ == '__main__':
         time_sum = time_end - time_start  # 计算的时间差为程序的执行时间，单位为秒/s
 
         all.append([k, real / len(name), time_sum])
-    tocsv(all, ["k", "accuracy", "CPU_time"], "accuracy-pearson.csv")'''
+    tocsv(all, ["k", "accuracy", "CPU_time"], "accuracy-pearson.csv")
 
     # L1
     all = []
