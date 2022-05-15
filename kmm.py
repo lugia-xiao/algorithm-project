@@ -213,7 +213,6 @@ def tocsv(data,header,file_path):
     return dataframe
 
 if __name__ == '__main__':
-    '''
     # kmm-single-one-way
     all = []
     for k in range(3, 10):
@@ -240,7 +239,6 @@ if __name__ == '__main__':
 
         all.append([k, real / len(name), time_sum])
         tocsv(all, ["k", "accuracy", "CPU_time"], "accuracy-kmm-one_way.csv")
-    '''
 
     # kmm-single-two-way
     all = []
@@ -269,7 +267,6 @@ if __name__ == '__main__':
         all.append([k, real / len(name), time_sum])
         tocsv(all, ["k", "accuracy", "CPU_time"], "accuracy-kmm-two_way.csv")
 
-    '''
     # kmm-combination-plus
     all = []
     k_all=[[5,7],[3,5],[4,8],[8,9],[3,9],[5,9],[7,9],[3,6,9],[5,7,9]]
@@ -296,8 +293,7 @@ if __name__ == '__main__':
         time_sum = time_end - time_start  # 计算的时间差为程序的执行时间，单位为秒/s
         all.append([k,real / len(name),time_sum])
         tocsv(all,["k","accuracy","CPU_time"],"accuracy-kmm-many_plus.csv")
-    '''
-    '''
+
     # kmm-combination-plus
     all = []
     k_all = [[5, 7], [3, 5], [4, 8], [8, 9], [3, 9], [5, 9], [7, 9], [3, 6, 9], [5, 7, 9]]
@@ -324,5 +320,5 @@ if __name__ == '__main__':
         time_sum = time_end - time_start  # 计算的时间差为程序的执行时间，单位为秒/s
         all.append([k, real / len(name), time_sum])
         tocsv(all, ["k", "accuracy", "CPU_time"], "accuracy-kmm-softmax.csv")
-    '''
+
 
