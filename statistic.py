@@ -21,4 +21,4 @@ if __name__ == '__main__':
         dic[speciei]+=1
     print(dic)
     all=[[k,v] for k,v in dic.items()]
-    tocsv(all,["specie","number"],"assigned-reads.csv")
+    tocsv(all,["specie","number"],"assigned-read.csv")
