@@ -8,7 +8,7 @@ if __name__ == '__main__':
         print("k=", k, "||method=kmm", "||reading", file)
         genomei = get_trans0(read_fa("./genomes/" + file)[1][0], k)
         genome.append([read_fa("./genomes/" + file)[0][0], genomei])
-    name, seq_all = read_fa("test.fa")
+    name, seq_all = read_fa("reads.fa")
 
     # statistic
     dic={}
@@ -21,4 +21,4 @@ if __name__ == '__main__':
         dic[speciei]+=1
     print(dic)
     all=[[k,v] for k,v in dic.items()]
-    tocsv(all,["specie","number"],"assigned-test.csv")
+    tocsv(all,["specie","number"],"assigned-reads.csv")
